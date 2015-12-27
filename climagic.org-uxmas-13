@@ -1,0 +1,21 @@
+thirteen buffer overflows, twelve virtual consoles, X Windows 11, Mac OS X, nine man page categories (on Linux), eight permission combinations, seven layers of networking, six different runlevels, five minutes of sudo, for loops of running (and lots of punning), three standard filehandles, two forked processes and a PID in a process tree.
+.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:._.:*~*:.
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxFF E4 0x7C941EED
+Buffer overflows are probably the most common vulnerability on Unix systems. It
+is a vulnerability mostly associated with programs written in the C or C++
+languages where there is no protection from a program writing data into
+adjacent memory. Programmers must write checks into their code to make sure
+that it is not possible for someone to put more data than a data structure
+allows.  If such a check is not present it is possible that someone can
+overflow a data structure and in the overflow insert code that can execute
+another program such as a shell. If the program is running as root, it may
+be possible to execute a shell as root using this type of vulnerability.
+
+Another similar vulnerability present in programs of any language are boundary
+checking errors. For example a program that is written to ask for a user to
+rate a book from 1 to 10, might not have proper bounds checking to make sure
+that only numbers within a range are input to the program. If you put in the
+number 11, the program may do something unexpected, crash or even give you
+access to the system. Even webpages like this one may given unexpected results,
+when you request "out of bound" values. ;)
+
